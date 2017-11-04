@@ -1,0 +1,47 @@
+---
+---
+
+@import "base";
+@import "variables";
+
+.header-container {
+  background-image: url({{ "/img/sky.jpg" | relative_url }});
+  background-position: 50% 50%;
+  height: 100vh;
+  z-index: -10;
+  color: $white;
+}
+
+nav {
+  position: relative;
+  top: -85px;
+  height: 80px;
+  background-color: #444;
+
+  ul {
+    list-style: none;
+    display: flex;
+    height: inherit;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  li {
+    flex: 0 1 150px;
+    text-align: center;
+
+    a {
+      color: #fff;
+      padding: 0.5em 1em 0.5em 1em;
+      transition-duration: 0.2s;
+
+      &:hover, &:active {
+        color: $primary-brand-color;
+        border-bottom: 3px $primary-brand-color solid;
+      }
+    }
+  }
+}
