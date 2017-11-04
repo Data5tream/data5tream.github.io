@@ -4,14 +4,6 @@
 @import "base";
 @import "variables";
 
-.header-container {
-  background-image: url({{ "/img/sky.jpg" | relative_url }});
-  background-position: 50% 50%;
-  height: 100vh;
-  z-index: -10;
-  color: $white;
-}
-
 nav {
   position: relative;
   top: -85px;
@@ -44,4 +36,46 @@ nav {
       }
     }
   }
+}
+
+hr {
+  height: 5em;
+  border: 0;
+  background-color: #37474F;
+}
+
+.header-container {
+  background-image: url({{ "/img/sky.jpg" | relative_url }});
+  background-position: 50% 50%;
+  height: 100vh;
+  z-index: -10;
+}
+
+.pres {
+  position: relative;
+  display: inline;
+  top: 20vh;
+  left: 30vh;
+  font-size: 1.5em;
+  color: $white;
+
+  span {
+    font-size: 2em;
+  }
+
+  small {
+    font-size: 0.75em;
+    color: darken($white, 10%);
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 0 0 $container-width*100%;
+  max-width: $container-width*100%;
+  margin-left: $container-width/4*100%;
 }
