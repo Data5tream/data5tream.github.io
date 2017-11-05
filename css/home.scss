@@ -5,36 +5,8 @@
 
 nav {
   position: relative;
-  top: -85px;
+  top: -75px;
   height: 80px;
-  background-color: #444;
-
-  ul {
-    list-style: none;
-    display: flex;
-    height: inherit;
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0;
-  }
-
-  li {
-    flex: 0 1 150px;
-    text-align: center;
-
-    a {
-      color: #fff;
-      padding: 0.5em 1em 0.5em 1em;
-      transition-duration: 0.2s;
-
-      &:hover, &:active {
-        color: $primary-brand-color;
-        border-bottom: 3px $primary-brand-color solid;
-      }
-    }
-  }
 }
 
 .header-background {
@@ -76,10 +48,6 @@ nav {
   flex: 0 0 $contact-card-width*100%;
   max-width: $contact-card-width*100%;
   margin-left: (1-$contact-card-width)/2*100%;
-
-  background-color: $white;
-  padding: 8px 16px 16px 16px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
   font-size: 1.4em;
 

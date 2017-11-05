@@ -1,0 +1,32 @@
+---
+---
+
+@import "base";
+
+body {
+  min-height: 100vh;
+  padding-top: 40px;
+  background-color: $mdbluegreydark;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  right: 0;
+}
+
+div.container {
+  margin-top: 40px;
+  min-height: 80vh;
+}
+
+.cell-content {
+  flex: 2 0 0;
+}
+.cell-sidebar {
+  flex: 1 0 0;
+  border-left: 1px $mdgreylight solid;
+  margin-left: -1px;
+  padding-left: 1em;
+}

@@ -34,6 +34,13 @@ code {
   background-color: $code-background-color;
 }
 
+hr.short {
+  height: 1px;
+  background-color: $mdgreylight;
+  border: 0;
+  margin: 16px;
+}
+
 hr.dark {
   height: 5em;
   border: 0;
@@ -62,12 +69,52 @@ footer {
   }
 }
 
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 40px;
+  background-color: #444;
+
+  ul {
+    list-style: none;
+    display: flex;
+    height: inherit;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  li {
+    flex: 0 1 150px;
+    text-align: center;
+
+    a {
+      color: #fff;
+      padding: 0.5em 1em 0.5em 1em;
+      transition-duration: 0.2s;
+      text-decoration: none !important;
+
+      &:hover, &:active {
+        color: $primary-brand-color;
+        border-bottom: 3px $primary-brand-color solid;
+      }
+    }
+  }
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
 }
 
 .content {
+  display: flex;
+  flex-wrap: wrap;
   flex: 0 0 $container-width*100%;
   max-width: $container-width*100%;
   margin-left: (1-$container-width)/2*100%;
@@ -79,4 +126,10 @@ footer {
   flex: 0 0 $container-width-wide*100%;
   max-width: $container-width-wide*100%;
   margin-left: (1-$container-width-wide)/2*100%;
+}
+
+.card {
+  background-color: $white;
+  padding: 8px 16px 16px 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }

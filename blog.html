@@ -1,0 +1,17 @@
+---
+title: Blog
+layout: default
+---
+
+<div class="cell-content">
+  <h1>Blog</h1>
+  Recent blog posts<br><br>
+
+  {% for post in site.posts %}
+    <h3>{{ post.title }} <small>({{ post.date | date_to_string }})</small></h3>
+    {%if post.resumen %}<p>{{ post.resumen}}</p><a href="{{ post.url }}">Continue reading</a>{% else %}<a href="{{ post.url }}">Read post</a>{% endif %}<br><hr class="short">
+  {% endfor %}
+</div>
+<div class="cell-sidebar">
+  {% include sidebar.html %}
+</div>
