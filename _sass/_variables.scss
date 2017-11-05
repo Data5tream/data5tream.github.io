@@ -3,11 +3,97 @@
 
 $font-stack: 'Open Sans', sans-serif;
 
+// Material Color definitions
+//
+// normal = 500 | dark = 700 | light = 300
+
+$white: #fff;
+$black: #000;
+
+$mdgrey: #9E9E9E;
+$mdgreydark: #424242;
+$mdgreylight: #E0E0E0;
+
+$mdred: #F44336;
+$mdreddark: #D32F2F;
+$mdredlight: #E57373;
+
+$mdpink: #E91E63;
+$mdpinkdark: #C2185B;
+$mdpinklight: #F06292;
+
+$mdpurple: #9C27B0;
+$mdpurpledark: #7B1FA2;
+$mdpurplelight: #BA68C8;
+
+$mddeeppurple: #673AB7;
+$mddeeppurpledark: #512DA8;
+$mddeeppurplelight: #9575CD;
+
+$mdindigo: #3F51B5;
+$mdindigodark: #303F9F;
+$mdindigolight: #7986CB;
+
+$mdblue: #2196F3;
+$mdbluedark: #1976D2;
+$mdbluelight: #64B5F6;
+
+$mdlightblue: #03A9F4;
+$mdlightbluedark: #0288D1;
+$mdlightbluelight: #4FC3F7;
+
+$mdcyan: #00BCD4;
+$mdcyandark: #0097A7;
+$mdcyanlight: #4DD0E1;
+
+$mdteal: #009688;
+$mdtealdark: #00796B;
+$mdteallight: #4DB6AC;
+
+$mdgreen: #4CAF50;
+$mdgreendark: #388E3C;
+$mdgreenlight: #81C784;
+
+$mdlightgreen: #8BC34A;
+$mdlightgreendark: #689F38;
+$mdlightgreenlight: #AED581;
+
+$mdlime: #CDDC39;
+$mdlimedark: #AFB42B;
+$mdlimelight: #DCE775;
+
+$mdyellow: #FFEB3B;
+$mdyellowdark: #FBC02D;
+$mdyellowlight: #FFF176;
+
+$mdamber: #FFC107;
+$mdamberdark: #FFA000;
+$mdamberlight: #FFD54F;
+
+$mdorange: #FF9800;
+$mdorangedark: #F57C00;
+$mdorangelight: #FFB74D;
+
+$mddeeporange: #FF5722;
+$mddeeporangedark: #E64A19;
+$mddeeporangelight: #FF8A65;
+
+$mdbrown: #795548;
+$mdbrowndark: #5D4037;
+$mdbrownlight: #A1887F;
+
+$mdbluegrey: #607D8B;
+$mdbluegreydark: #455A64;
+$mdbluegreylight: #90A4AE;
+
 // Colors
 $primary-brand-color: #ff9800;
 $primary-text-color: #444;
 
-$white: #fff;
+$primary-background-color: $white;
+$code-background-color: #444;
+
+
 
 // Containers & margins
 $container-width: 2/3;
