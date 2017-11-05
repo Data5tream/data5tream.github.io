@@ -2,7 +2,6 @@
 ---
 
 @import "base";
-@import "variables";
 
 nav {
   position: relative;
@@ -38,17 +37,15 @@ nav {
   }
 }
 
-hr {
-  height: 5em;
-  border: 0;
-  background-color: #37474F;
-}
-
-.header-container {
+.header-background {
+  height: 100vh;
   background-image: url({{ "/img/sky.jpg" | relative_url }});
   background-position: 50% 50%;
-  height: 100vh;
-  z-index: -10;
+}
+
+.header-foreground {
+  position: absolute;
+  top: 15vh;
 }
 
 .pres {
@@ -77,5 +74,28 @@ hr {
 .content {
   flex: 0 0 $container-width*100%;
   max-width: $container-width*100%;
-  margin-left: $container-width/4*100%;
+  margin-left: (1-$container-width)/2*100%;
+}
+
+#contact {
+  padding: 2em 0 2em 0;
+  background-color: #37474F;
+}
+
+.contact-card {
+  $contact-card-width: 2/5;
+  flex: 0 0 $contact-card-width*100%;
+  max-width: $contact-card-width*100%;
+  margin-left: (1-$contact-card-width)/2*100%;
+
+  background-color: $white;
+  padding: 8px 16px 16px 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  font-size: 1.4em;
+
+  h2 {
+    margin: 0 0 -0.1em 0;
+
+  }
 }

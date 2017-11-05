@@ -8,11 +8,40 @@ body {
   color: $primary-text-color;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: darken($primary-text-color, 10%);
+  font-weight: 300;
+}
+
+p {
+  text-indent: 1em;
+}
+
 a {
   color: $primary-brand-color;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $primary-brand-color;
+    color: lighten($primary-brand-color, 20%);
+    font-weight: bold;
   }
+}
+
+code {
+  display: block;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  margin: 0.5em 10em 0.5em 1em;
+  background-color: $code-background-color;
+}
+
+hr.dark {
+  height: 5em;
+  border: 0;
+  background-color: #37474F;
+}
+
+hr.light {
+  height: 5em;
+  border: 0;
+  background-color: $mdbluegreylight;
 }
