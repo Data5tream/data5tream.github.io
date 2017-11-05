@@ -28,9 +28,9 @@ a {
 }
 
 code {
-  display: block;
-  padding: 0.5em 1.5em 0.5em 1.5em;
-  margin: 0.5em 10em 0.5em 1em;
+  display: inline-block;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  margin: 0;
   background-color: $code-background-color;
 }
 
