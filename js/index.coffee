@@ -3,11 +3,15 @@
 
 height = 0
 
-# Set new browser height
+# Save browser height
 setHeight = ->
   height = document.body.clientHeight-120
 
+# Set height when windows is resized
 window.onresize = setHeight
+
+# Set height when page has finished loading
+document.addEventListener("DOMContentLoaded", setHeight)
 
 # Hide/show secondary nav on scroll
 document.addEventListener("scroll", (event) ->
