@@ -3,10 +3,76 @@
 
 @import "base";
 
-nav {
+#hiddennav {
+  height: 2em;
+  width: 50%;
+  margin-left: 25%;
+
+  li {
+    margin-left: 0 !important;
+    height: inherit !important;
+  }
+
+  li:first-child {
+    margin: 0;
+    a:hover, a:active {
+      border-bottom: 3px $primary-brand-color solid !important;
+    }
+  }
+}
+
+#navbar-child {
+  display: none;
+  z-index: 500;
+  margin-top: 49px;
+}
+
+.home-navbar-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 1/2*100%;
+  margin: 0;
+  margin-left: 1/4*100%;
+  list-style: none;
+
+  li {
+    flex: 0 1 1/4*100%;
+    text-align: center;
+
+    a {
+      color: #fff;
+      padding: 0.5em 1em 0.5em 1em;
+      transition-duration: 0.2s;
+      text-decoration: none !important;
+    }
+  }
+}
+
+.home-navbar {
   position: relative;
   top: -75px;
   height: 80px;
+  background-color: #444;
+  z-index: 800;
+
+  li {
+    span {
+      margin-left: 2em;
+      visibility: hidden;
+    }
+
+    &:hover, &:active {
+      a {
+        color: $primary-brand-color;
+      }
+      span {
+        visibility: visible;
+      }
+    }
+  }
 }
 
 .header-background {

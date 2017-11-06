@@ -11,9 +11,26 @@ title: Portfolio
 {% include meta.html %}
 
 <link rel="stylesheet" href={{ "/css/home.css" | relative_url }}>
-
 </head>
 <body>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href={{ "/" | absolute_url}}><img src={{ "img/brand_icon.png" | absolute_url }} /></a></li>
+      <li><a href={{ "/" | absolute_url }}>Home</a></li>
+      <li><a href={{ "/blog.html" | absolute_url }}>Blog</a></li>
+      <li><a href={{ "/fccprojects" | absolute_url }}>freeCodeCamp</a></li>
+    </ul>
+  </nav>
+  <div id="navbar-child" class="navbar">
+    <ul id="hiddennav" class="home-navbar-ul">
+      <li><a href="#top" onclick="shiftTo('home')">Top</a></li>
+      <li><a href="#aboutme" onclick="shiftTo('aboutme')">About me</a></li>
+      <li><a href="#projects" onclick="shiftTo('projects')">Projects</a></li>
+      <li><a href="#contact" onclick="shiftTo('contact')">Contact</a></li>
+    </ul>
+  </div>
+
   <div class="header-container">
     <div class="header-layer header-background"></div>
     <div class="header-layer header-foreground">
@@ -24,12 +41,12 @@ title: Portfolio
     </div>
   </div>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href="#top" onclick="shiftTo('home')">Home</a></li>
-      <li><a href="#aboutme" onclick="shiftTo('aboutme')">About me</a></li>
-      <li><a href="#projects" onclick="shiftTo('projects')">Projects</a></li>
-      <li><a href="#contact" onclick="shiftTo('contact')">Contact</a></li>
+  <nav class="home-navbar">
+    <ul class="home-navbar-ul">
+      <li><a href="#top" onclick="shiftTo('home')"><i class="fa fa-home fa-3x" aria-hidden="true"></i><br><span>Top</span></a></li>
+      <li><a href="#aboutme" onclick="shiftTo('aboutme')"><i class="fa fa-id-card fa-3x" aria-hidden="true"></i><br><span>About me</span></a></li>
+      <li><a href="#projects" onclick="shiftTo('projects')"><i class="fa fa-file-code-o fa-3x" aria-hidden="true"></i><br><span>Projects</span></a></li>
+      <li><a href="#contact" onclick="shiftTo('contact')"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i><br><span>Contact</span></a></li>
     </ul>
   </nav>
   <div class="container">
@@ -71,6 +88,8 @@ title: Portfolio
   </div>
 
   {% include footer.html %}
+
+  <script src={{"js/index.js" | absoulte_url }}></script>
 
 </body>
 </html>
