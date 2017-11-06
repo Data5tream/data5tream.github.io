@@ -26,10 +26,4 @@ div.container {
   padding: 8px 16px 16px 16px;
   margin: 10px 20px 10px 10px;
   @include card(1);
-
-  transition-duration: 0.4s;
-
-  &:hover {
-    @include card(3);
-  }
 }
