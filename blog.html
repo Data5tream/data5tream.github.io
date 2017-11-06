@@ -19,8 +19,10 @@ title: Blog
   <div class="container">
     <div class="content card">
       <div class="cell-content">
-        <h1>Blog</h1>
-        Recent blog posts<br><br>
+        <div class="pageheader">
+          Recent blog posts
+        </div>
+        <hr class="stripes mini2x">
 
         {% for post in site.posts %}
           <div class="bloglist-entry">
@@ -33,6 +35,7 @@ title: Blog
               </div>
             </div>
           </div>
+          <hr class="stripes mini">
         {% endfor %}
       </div>
       <!--<div class="cell-sidebar">

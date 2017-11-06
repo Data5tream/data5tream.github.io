@@ -45,25 +45,35 @@ hr.short {
   margin: 0 0 16px 0;
 }
 
-hr.base {
+.hrbase {
   height: 5em;
   width: 110%;
   margin-left: -5%;
   border: 0;
 }
 
+hr.mini {
+  height: 1em;
+  width: 100% !important;
+  margin: 0 !important;
+}
+hr.mini2x {
+  @extend hr.mini;
+  height: 2em;
+}
+
 hr.dark {
-  @extend hr.base;
+  @extend .hrbase;
   background-color: #37474F;
 }
 
 hr.light {
-  @extend hr.base;
+  @extend .hrbase;
   background-color: $mdbluegreylight;
 }
 
 hr.stripes {
-  @extend hr.base;
+  @extend .hrbase;
   @include colorstripes();
   box-shadow: inset 0 0 8px $black;
 }
@@ -237,21 +247,7 @@ ul, ol, dl, figure,
 
 .cardlink {
   flex: 2;
-  margin-top: 0.5em;
-
-  a {
-    background-color: $primary-brand-color;
-    color: $white;
-
-    padding: 0.25em 0.5em 0.25em 0.5em;
-    border: 0;
-    border-radius: 0.5em;
-
-    &:hover, &:active {
-      text-decoration: none;
-      @include card(1);
-    }
-  }
+  font-weight: bold;
 }
 
 .cardmeta {

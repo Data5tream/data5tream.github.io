@@ -29,54 +29,6 @@
   margin-top: 49px;
 }
 
-.home-navbar-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 1/2*100%;
-  margin: 0;
-  margin-left: 1/4*100%;
-  list-style: none;
-
-  li {
-    flex: 0 1 1/4*100%;
-    text-align: center;
-
-    a {
-      color: $white;
-      padding: 0.5em 1em 0.5em 1em;
-      transition-duration: 0.2s;
-      text-decoration: none !important;
-    }
-  }
-}
-
-.home-navbar {
-  position: relative;
-  top: -75px;
-  height: 80px;
-  background-color: $mdgreydark;
-  z-index: 800;
-
-  li {
-    span {
-      margin-left: 2em;
-      visibility: hidden;
-    }
-
-    &:hover, &:active {
-      a {
-        color: $primary-brand-color;
-      }
-      span {
-        visibility: visible;
-      }
-    }
-  }
-}
-
 .header-background {
   height: 100vh;
   background-image: url({{ "/img/sky.jpg" | absolute_url }});
@@ -103,6 +55,55 @@
   small {
     font-size: 0.75em;
     color: darken($white, 10%);
+  }
+}
+
+.home-navbar {
+  position: relative;
+  top: -75px;
+  height: 80px;
+  padding-top: 4px;
+  background-color: $mdgreydark;
+  z-index: 800;
+
+  li {
+    span {
+      margin-left: 2em;
+      visibility: hidden;
+    }
+
+    &:hover, &:active {
+      a {
+        color: $primary-brand-color;
+      }
+      span {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.home-navbar-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 1/2*100%;
+  margin: 0;
+  margin-left: 1/4*100%;
+  list-style: none;
+
+  li {
+    flex: 0 1 1/4*100%;
+    text-align: center;
+
+    a {
+      color: $white;
+      padding: 0.5em 1em 0.5em 1em;
+      transition-duration: 0.2s;
+      text-decoration: none !important;
+    }
   }
 }
 
