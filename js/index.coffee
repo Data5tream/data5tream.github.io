@@ -5,7 +5,7 @@ height = 0
 
 # Set new browser height
 setHeight = ->
-  height = document.body.clientHeight-129
+  height = document.body.clientHeight-120
 
 window.onresize = setHeight
 
