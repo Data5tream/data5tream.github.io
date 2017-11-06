@@ -78,7 +78,7 @@
 
 .header-background {
   height: 100vh;
-  background-image: url({{ "/img/sky.jpg" | relative_url }});
+  background-image: url({{ "/img/sky.jpg" | absolute_url }});
   background-position: 50% 50%;
 }
 

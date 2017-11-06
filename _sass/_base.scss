@@ -29,6 +29,7 @@ a {
   color: $primary-brand-color;
   text-decoration: none;
 	cursor: pointer;
+  outline: none;
   &:hover, &:active {
     color: lighten($primary-brand-color, 20%);
     text-decoration: underline;
