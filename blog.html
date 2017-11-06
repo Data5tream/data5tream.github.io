@@ -1,17 +1,47 @@
 ---
 title: Blog
-layout: default
 ---
 
-<div class="cell-content">
-  <h1>Blog</h1>
-  Recent blog posts<br><br>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
 
-  {% for post in site.posts %}
-    <h3>{{ post.title }} <small>({{ post.date | date_to_string }})</small></h3>
-    {%if post.resumen %}<p>{{ post.resumen}}</p><a href="{{ post.url }}">Continue reading</a>{% else %}<a href="{{ post.url }}">Read post</a>{% endif %}<br><hr class="short">
-  {% endfor %}
-</div>
-<div class="cell-sidebar">
-  {% include sidebar.html %}
-</div>
+{% include meta.html %}
+<link rel="stylesheet" href={{ "css/blog.css" | relative_url }}>
+
+</head>
+
+<body>
+
+  {% include navbar.html %}
+
+  <div class="container">
+    <div class="content card">
+      <div class="cell-content">
+        <h1>Blog</h1>
+        Recent blog posts<br><br>
+
+        {% for post in site.posts %}
+          <div class="bloglist-entry">
+            <div class="cardtitle">{{ post.title }}</div>
+            <div class="cardcontent">
+              <p>{%if post.resumen %}{{ post.resumen}}{% endif %}</p>
+              <div class="cardbottom">
+                <div class="cardlink"><a href="{{ post.url }}">Read post</a></div>
+                <div class="cardmeta">Posted on {{ post.date | date_to_string }}</small></div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="cell-sidebar">
+        {% include sidebar.html %}
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+</body>
+</html>

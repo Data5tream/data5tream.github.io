@@ -1,0 +1,35 @@
+---
+---
+
+@import "base";
+
+body {
+  padding-top: 40px;
+  background-color: $mdbluegreydark;
+}
+
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 40px;
+}
+
+div.container {
+  margin-top: 40px;
+  min-height: 80vh;
+}
+
+.bloglist-entry {
+  position: relative;
+  padding: 8px 16px 16px 16px;
+  margin: 10px 20px 10px 10px;
+  @include card(1);
+
+  transition-duration: 0.4s;
+
+  &:hover {
+    @include card(3);
+  }
+}
