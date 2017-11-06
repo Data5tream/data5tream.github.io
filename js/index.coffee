@@ -15,7 +15,6 @@ document.addEventListener("scroll", (event) ->
     document.getElementById("navbar-child").style.display = "block"
   else
     document.getElementById("navbar-child").style.display = "none"
-
   )
 
 # Scroll to link
@@ -30,19 +29,16 @@ scrollTo = (element, duration) ->
     t = e.scrollTop
     ++e.scrollTop
     if t+1 == e.scrollTop-- then e = e else e = document.body
-  scrollToC(e, e.scrollTop, element, duration)
-
-scrollToC = (element, from, to, duration) ->
   if duration <= 0
     return
-  if typeof from == "object"
-    from = from.offsetTop
-  if to? and typeof to == "object"
-    to = to.offsetTop
+  if typeof e.scrollTop == "object"
+    e.scrollTop = e.scrollTop.offsetTop
+  if element? and typeof element == "object"
+    element = element.offsetTop
   else
-    to = 0
+    element = 0
 
-  scrollToX(element, from, to, 0, 1/duration, 20, easeOutCuaic)
+  scrollToX(e, e.scrollTop, element, 0, 1/duration, 20, easeOutCuaic)
 
 scrollToX = (element, xFrom, xTo, t01, speed, step, motion) ->
   if t01 < 0 or t01 > 1 or speed <= 0
@@ -59,6 +55,3 @@ scrollToX = (element, xFrom, xTo, t01, speed, step, motion) ->
 easeOutCuaic = (t) ->
   t--
   t*t*t+1
-
-# Set height when page has finished loading
-document.addEventListener("DOMContentLoaded", setHeight)
