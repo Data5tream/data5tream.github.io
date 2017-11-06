@@ -26,7 +26,7 @@ title: Blog
           <div class="bloglist-entry">
             <div class="cardtitle">{{ post.title }}</div>
             <div class="cardcontent">
-              <p>{%if post.resumen %}{{ post.resumen}}{% endif %}</p>
+              <p>{%if post.excerpt %}{{ post.excerpt }}{% endif %}</p>
               <div class="cardbottom">
                 <div class="cardlink"><a href="{{ post.url }}">Read post</a></div>
                 <div class="cardmeta">Posted on {{ post.date | date_to_string }}</small></div>
