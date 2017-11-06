@@ -20,8 +20,10 @@ document.addEventListener("scroll", (event) ->
 
 # Scroll to link
 # Based on https://stackoverflow.com/a/23844067
-# TODO make this work
-###
+@shiftTo = (element) ->
+  scrollTo(document.getElementById(element), 1000)
+  return false
+
 scrollTo = (element, duration) ->
   e = document.documentElement
   if e.scrollTop == 0
@@ -35,8 +37,10 @@ scrollToC = (element, from, to, duration) ->
     return
   if typeof from == "object"
     from = from.offsetTop
-  if typeof to == "object"
+  if to? and typeof to == "object"
     to = to.offsetTop
+  else
+    to = 0
 
   scrollToX(element, from, to, 0, 1/duration, 20, easeOutCuaic)
 
@@ -55,8 +59,6 @@ scrollToX = (element, xFrom, xTo, t01, speed, step, motion) ->
 easeOutCuaic = (t) ->
   t--
   t*t*t+1
-###
-
 
 # Set height when page has finished loading
 document.addEventListener("DOMContentLoaded", setHeight)
