@@ -14,14 +14,8 @@ title: Portfolio
 </head>
 <body>
 
-  <nav class="navbar">
-    <ul>
-      <li><a href={{ "/" | absolute_url}}><img src={{ "img/brand_icon.png" | absolute_url }} /></a></li>
-      <li><a href={{ "/" | absolute_url }}>Home</a></li>
-      <li><a href={{ "/blog.html" | absolute_url }}>Blog</a></li>
-      <li><a href={{ "/fccprojects" | absolute_url }}>freeCodeCamp</a></li>
-    </ul>
-  </nav>
+  {% include navbar.html %}
+  
   <div id="navbar-child" class="navbar">
     <ul id="hiddennav" class="home-navbar-ul">
       <li><a href="#top" onclick="return shiftTo('home')">Top</a></li>
