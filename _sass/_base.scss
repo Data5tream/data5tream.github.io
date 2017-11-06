@@ -12,6 +12,7 @@ body {
   right: 0;
   bottom: 0;
   font: 100% $font-stack;
+  font-size: $font-default-size !important;
   color: $primary-text-color;
 }
 
@@ -77,25 +78,26 @@ nav {
   left: 0;
   top: 0;
   right: 0;
-  height: 40px;
+  min-height: 40px;
   background-color: #444;
   z-index: 1000;
 
   ul {
-    list-style: none;
     display: flex;
-    height: inherit;
-    flex: 1;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding-left: 0;
-    margin-top: 0;
+
+    width: 4/6*100%;
+    margin: 0;
+    margin-left: 1/6*100%;
+    list-style: none;
   }
 
   li {
-    flex: 0 1 150px;
+    flex: 0 1;
     text-align: center;
+    margin-left: 1em;
 
     a {
       color: #fff;
@@ -107,6 +109,13 @@ nav {
         color: $primary-brand-color;
         border-bottom: 3px $primary-brand-color solid;
       }
+    }
+  }
+  li:first-child {
+    height: 49px;
+    margin: 0;
+    a:hover, a:active {
+      border-bottom: 0;
     }
   }
 }
