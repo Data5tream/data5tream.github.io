@@ -34,3 +34,21 @@
 
   @return 0 $primary-offset $blur $color;
 }
+
+@mixin colorstripes() {
+  background: repeating-linear-gradient(
+    -45deg,
+    $mdreddark,
+    $mdreddark 100px,
+    $mdindigo 100px,
+    $mdindigo 200px,
+    $mdbluedark 200px,
+    $mdbluedark 300px,
+    $mdtealdark 300px,
+    $mdtealdark 400px,
+    $mdamberdark 400px,
+    $mdamberdark 500px,
+    $mddeeporange 500px,
+    $mddeeporange 600px
+    );
+}
