@@ -38,11 +38,13 @@ scrollTo = (element, duration) ->
   if typeof e.scrollTop == "object"
     e.scrollTop = e.scrollTop.offsetTop
   if element? and typeof element == "object"
-    element = element.offsetTop
+    dest = element.offsetTop
+    if dest >= 90
+      dest -= 90
   else
-    element = 0
+    dest = 0
 
-  scrollToX(e, e.scrollTop, element, 0, 1/duration, 20, easeOutCuaic)
+  scrollToX(e, e.scrollTop, dest, 0, 1/duration, 20, easeOutCuaic)
 
 scrollToX = (element, xFrom, xTo, t01, speed, step, motion) ->
   if t01 < 0 or t01 > 1 or speed <= 0
@@ -55,7 +57,6 @@ scrollToX = (element, xFrom, xTo, t01, speed, step, motion) ->
     scrollToX(element, xFrom, xTo, t01, speed, step, motion)
   , step)
 
-# correct
 easeOutCuaic = (t) ->
   t--
   t*t*t+1

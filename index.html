@@ -46,15 +46,16 @@ title: Portfolio
   <div class="container">
     <div id="aboutme" class="content">
       <div>
-        <h2>About me</h2>
+        <h1>About me</h1>
+        <p>(I guess I'll have to write something real here someday)</p>
         <p>Amet eum nihil et voluptatem perferendis quas omnis suscipit. Soluta omnis saepe magnam. Voluptate repellendus dolorem eveniet rerum rem. Vel aut voluptatum ut a nihil commodi ipsam. Nulla consequatur occaecati nostrum nisi qui architecto.</p>
         <p>Magni eum delectus aut numquam ab. Voluptates reprehenderit et reiciendis tempore odio saepe architecto. Et a quod vitae quae amet ut. Voluptatem minima eius delectus ut architecto minima atque. Totam itaque quia inventore.</p>
         <p>Delectus molestiae sit aperiam eos sunt error ipsam et. Delectus ducimus ipsam eum perspiciatis amet neque. Enim ipsa perferendis facilis necessitatibus. Laborum quis dolore et. Minus ducimus minima ut magnam autem dolorum. Labore nisi et ut qui.</p>
         <p>Et distinctio quaerat assumenda facere nihil enim molestias. Aut id modi animi et doloremque non amet illo. Optio in temporibus eaque voluptates perferendis tempora iure. Aspernatur nobis dolores aut eum. Dignissimos enim et natus sapiente et nostrum dicta in. Sed eum facere numquam laboriosam accusantium.</p>
         <p>Fuga quia sunt numquam molestiae perferendis. Ut eum qui accusamus tempora quos. Dignissimos ad soluta et cupiditate mollitia. Qui nihil et alias. Laboriosam porro et hic aut rerum quis tempora. Vel nam ex qui eius autem vel quam.</p>
         {% highlight js %}
-          // Hello world
           system.log("hello world");
+          >>> Hello world!
         {% endhighlight %}
       </div>
     </div>
@@ -64,12 +65,142 @@ title: Portfolio
 
   <div class="container">
     <div id="projects" class="content">
-      <div>
-        <h2>Projects</h2>
-        <p>Nemo atque aut tenetur id eius corrupti. Eum magni in eos doloribus hic qui. Minus sed enim ab qui qui reiciendis necessitatibus quas. Sapiente deleniti adipisci sequi. Totam ut alias a.</p>
-        <p>Sunt natus culpa autem mollitia repellat dolorem vel. Molestiae dolorum inventore eos. Porro qui sit error mollitia. Aliquam non consequuntur nihil. Est labore labore est aut illo magnam unde. Corporis pariatur accusamus et incidunt.</p>
-        <p>Dolores harum modi possimus velit eius temporibus. Repellendus qui illum aspernatur. Voluptatem rerum quas alias tempore autem. Enim ducimus et nam necessitatibus. Corporis sit officia quibusdam qui modi aut eaque autem. Est necessitatibus beatae aliquid et molestiae qui totam.</p>
-        <p>Aut voluptatibus omnis aliquam. Inventore dolorem suscipit rerum fuga quia. Sit ut cupiditate quae iure vel consectetur earum quia. Impedit quis aliquid qui consectetur omnis debitis.</p>
+      <h1>Projects</h1>
+      <div class="project-container">
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href="https://chiemgau-fahrdienst.de" target="_blank"><img src={{ "/img/thumbnails/chiemgau_fahrdienst_thumbnail.png" | absolute_url }} height="200" width="300" alt="Chiemgau Fahrdienst" /></a>
+            </div>
+            <div class="cardtitle">
+              Chiemgau Fahrdienst
+            </div>
+            <div class="cardcontent">
+              Design adaptation, IT consulting and SEO
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href="https://chiemgau-fahrdienst.de" target="_blank">Visit C.F.</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href={{ "/" | absolute_url }}><img src={{ "/img/thumbnails/chiemgau_fahrdienst_thumbnail.png" | absolute_url }} height="200" width="300" alt="data5tream portfolio" /></a>
+            </div>
+            <div class="cardtitle">
+              My portfolio
+            </div>
+            <div class="cardcontent">
+              This portfolio is build using HTML5, CSS3 with SASS and vanilla JavaScript. Static content is generate with Jekyll.
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href={{ "/" | absolute_url }} target="_blank">Visit the portfolio</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-divider">
+          <hr class="stripes mini">
+          <h1>freeCodeCamp projects</h1>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href={{ "/fcc_projects/pomodoro.html" | absolute_url }}><img src={{ "/img/thumbnails/pomodoro_thumbnail.png" | absolute_url }} height="200" width="300" alt="Pomodoro clock" /></a>
+            </div>
+            <div class="cardtitle">
+              Pomodoro Clock
+            </div>
+            <div class="cardcontent">
+              A pomodoro clock built with bootstrap & jQuery
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href={{ "/fcc_projects/pomodoro.html" | absolute_url }}>Clock in</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href={{ "/fcc_projects/calculator.html" | absolute_url }}><img src={{ "/img/thumbnails/calculator_thumbnail.png" | absolute_url }} height="200" width="300" alt="Calculator" /></a>
+            </div>
+            <div class="cardtitle">
+              Calculator
+            </div>
+            <div class="cardcontent">
+              A calculator built with bootstrap & jQuery
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href={{ "/fcc_projects/calculator.html" | absolute_url }}>Calculate</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href={{ "/fcc_projects/twitch.html" | absolute_url }}><img src={{ "/img/thumbnails/twitch_thumbnail.png" | absolute_url }} height="200" width="300" alt="Twitch widget" /></a>
+            </div>
+            <div class="cardtitle">
+              Twitch widget
+            </div>
+            <div class="cardcontent">
+              A Twitch streamer status widget built with Bootstrap & jQuery using a REST API
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href={{ "/fcc_projects/twitch.html" | absolute_url }}>Check streamers</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href={{ "/fcc_projects/wiki.html" | absolute_url }}><img src={{ "/img/thumbnails/wiki_thumbnail.png" | absolute_url }} height="200" width="300" alt="Wikipedia search" /></a>
+            </div>
+            <div class="cardtitle">
+              Wikipedia search
+            </div>
+            <div class="cardcontent">
+              A Wikipedia search widget built with Bootstrap & jQuery using the Wikimedia REST API
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href={{ "/fcc_projects/wiki.html" | absolute_url }}>Search the wiki</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href={{ "/fcc_projects/quote-machine.html" | absolute_url }}><img src={{ "/img/thumbnails/quote_thumbnail.png" | absolute_url }} height="200" width="300" alt="Quote machine" /></a>
+            </div>
+            <div class="cardtitle">
+              Quote Machine
+            </div>
+            <div class="cardcontent">
+              Get random quotes using Bootstrap, jQuery and a REST API
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href={{ "/fcc_projects/quote-machine.html" | absolute_url }}>Get quotes</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-cell">
+          <div class="card">
+            <div class="cardimg">
+              <a href={{ "/fcc_projects/weather.html" | absolute_url }}><img src={{ "/img/thumbnails/weather_thumbnail.png" | absolute_url }} height="200" width="300" alt="Weather widget" /></a>
+            </div>
+            <div class="cardtitle">
+              Weather widget
+            </div>
+            <div class="cardcontent">
+              A weather widget that displays the current weather using IP based geolocation.<br>
+              Built using Bootstrap & jQuery for the front-end and python for the back-end.
+            </div>
+            <div class="cardbottom">
+              <div class="cardlink"><a href={{ "/fcc_projects/weather.html" | absolute_url }}>Get your weather</a></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

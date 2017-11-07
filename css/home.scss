@@ -107,6 +107,39 @@
   }
 }
 
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.project-cell {
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  margin-bottom: 4em;
+
+  .card {
+    margin: 8px;
+    height: 100%;
+    max-width: 300px;
+    transition-duration: 0.4s;
+
+    &:hover {
+      @include card(2);
+    }
+  }
+  .cardtitle {
+    text-transform: none;
+  }
+}
+
+.project-divider {
+  flex: 1 0 100%;
+}
+
 #contact {
   padding: 2em 0 2em 0;
   background-color: #37474F;

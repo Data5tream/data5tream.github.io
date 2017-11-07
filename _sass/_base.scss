@@ -219,6 +219,10 @@ ul, ol, dl, figure,
   @include card(1);
 }
 
+.cardimg {
+  text-align: center;
+}
+
 .cardtitle {
   display: block;
   font-weight: 400;
@@ -229,7 +233,8 @@ ul, ol, dl, figure,
 
 .cardcontent {
   display: block;
-  padding-bottom: 5em;
+  padding-top: 8px;
+  padding-bottom: 2em;
 }
 
 .cardbottom {
