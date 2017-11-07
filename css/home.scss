@@ -154,8 +154,9 @@
 .project-cell {
   display: flex;
   justify-content: center;
-  flex: 1 0 1/3*100%;
-  margin-bottom: 4em;
+  flex: auto;
+  max-width: 316px;
+  margin-bottom: 32px;
 
   .card {
     margin: 8px;
@@ -189,9 +190,10 @@
 
   font-size: 1.4em;
 
-  h2 {
-    margin: 0 0 -0.1em 0;
+  .cardtitle {
+    padding: 16px 16px 0 16px;
   }
+  
   .wrapper {
     display: flex;
     flex-wrap: wrap;
