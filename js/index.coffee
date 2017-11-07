@@ -1,11 +1,11 @@
 ---
 ---
 
-height = 0
+navheight = 0
 
 # Save browser height
 setHeight = ->
-  height = document.body.clientHeight-120
+  navheight = document.body.clientHeight-120
 
 # Set height when windows is resized
 window.onresize = setHeight
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", setHeight)
 
 # Hide/show secondary nav on scroll
 document.addEventListener("scroll", (event) ->
-  if event.pageY >= height
+  if event.pageY >= navheight
     document.getElementById("navbar-child").style.display = "block"
   else
     document.getElementById("navbar-child").style.display = "none"

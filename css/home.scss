@@ -49,6 +49,7 @@
     max-height: 250px;
     border: 4px $white solid;
     border-radius: 125px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -102,6 +103,7 @@
   width: 1/2*100%;
   margin: 0;
   margin-left: 1/4*100%;
+  padding-left: 0;
   list-style: none;
 
   li {
@@ -193,7 +195,7 @@
   .cardtitle {
     padding: 16px 16px 0 16px;
   }
-  
+
   .wrapper {
     display: flex;
     flex-wrap: wrap;
