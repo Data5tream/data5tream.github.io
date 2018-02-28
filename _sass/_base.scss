@@ -163,6 +163,10 @@ footer {
       padding: 0;
       margin-left: 0;
 
+      li {
+        min-height: 2em;
+      }
+
       li:first-child {
         display: none;
       }
