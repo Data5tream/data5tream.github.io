@@ -16,7 +16,7 @@
 title: Simon St. Barth
 email: data5tream@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A simple portfolio build with HTML5/CSS3 and SASS. Hosted with Jekyll.
+  A portfolio build with HTML5, CSS3 (SASS) and JS (CoffeeScript). Static content generated with Jekyll. Hosted on Github Pages.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://data5tream.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: data5tream
@@ -26,7 +26,6 @@ excerpt_separator: <!--more-->
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-coffeescript

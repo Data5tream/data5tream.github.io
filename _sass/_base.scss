@@ -144,6 +144,22 @@ footer {
     }
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .navbar {
+    ul {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin-left: 0;
+    }
+    li {
+      margin-left: 0;
+    }
+  }
+  #hiddennav {
+    display: none !important;
+  }
+}
 
 //
 // Code formatting
