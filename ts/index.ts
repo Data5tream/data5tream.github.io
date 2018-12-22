@@ -8,9 +8,9 @@ window.onload = function() {
     function setHeight() {
         return navheight = document.body.clientHeight - 120;
     };
-    setHeight;
+    setHeight();
 
-    window.onresize = setHeight;
+    window.addEventListener('resize', setHeight);
     
     document.addEventListener('scroll', function(event) {
         if (event.pageY >= navheight) {
