@@ -88,6 +88,9 @@
     span {
       margin-left: 2em;
       visibility: hidden;
+      transition: all 0.25s;
+      opacity: 0;
+      color: $primary-brand-color;
     }
 
     &:hover, &:active {
@@ -96,6 +99,7 @@
       }
       span {
         visibility: visible;
+        opacity: 1;
       }
     }
   }
@@ -120,7 +124,7 @@
     a {
       color: $white;
       padding: 0.5em 1em 0.5em 1em;
-      transition-duration: 0.2s;
+      transition: all 0.5s;
       text-decoration: none !important;
     }
   }

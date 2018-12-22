@@ -127,7 +127,7 @@ footer {
     a {
       color: $white;
       padding: 0.5em 1em 0.5em 1em;
-      transition-duration: 0.2s;
+      transition: all 0.2s;
       text-decoration: none !important;
 
       &:hover, &:active {
