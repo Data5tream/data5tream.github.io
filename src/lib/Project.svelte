@@ -24,11 +24,11 @@
 
 <style lang="postcss">
     header {
-        @apply card-header pb-2 border-b border-b-gray-600
+        @apply p-4 pb-2 border-b border-b-gray-600
     }
 
     footer {
-        @apply card-footer py-2 border-t border-t-gray-600 flex justify-between
+        @apply px-4 py-2 border-t border-t-gray-600 flex justify-between
     }
 
     a {
