@@ -5,7 +5,7 @@
     export let source;
 
 </script>
-<div class="card text-left flex flex-col">
+<div class="border rounded border-b-gray-600 text-left flex flex-col">
     <header>
         { title }
     </header>
