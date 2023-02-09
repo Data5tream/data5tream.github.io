@@ -6,6 +6,6 @@
 
 <style lang="postcss">
     header {
-        @apply absolute flex items-center h-12 w-full bg-gray-800 z-10;
+        @apply absolute flex items-center h-12 w-full bg-brand-1000 z-10;
     }
 </style>

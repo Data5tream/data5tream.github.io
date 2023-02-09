@@ -5,13 +5,13 @@
     export let source;
 
 </script>
-<div class="border rounded border-b-gray-600 text-left flex flex-col">
+<div class="border border-brand-200 rounded text-left flex flex-col">
     <header>
         { title }
     </header>
-    <div class="p-4 flex-1">
+    <article>
         <p>{ desc }</p>
-    </div>
+    </article>
     <footer>
         {#if source}
             <a class="btn" href={source}>Source</a>
@@ -24,14 +24,19 @@
 
 <style lang="postcss">
     header {
-        @apply p-4 pb-2 border-b border-b-gray-600
+        @apply p-4 pb-2 tracking-wide;
+    }
+
+    article {
+        @apply p-4 flex-1 border-y border-y-brand-200;
     }
 
     footer {
-        @apply px-4 py-2 border-t border-t-gray-600 flex justify-between
+        @apply px-4 py-2 flex justify-between;
     }
 
     a {
-        @apply border rounded py-1 px-4 uppercase text-sm hover:bg-white hover:text-gray-800
+        @apply border rounded py-1 px-4 bg-brand-100 uppercase text-sm transition ring-brand-800 ring-offset-2
+        hover:bg-brand-1000 hover:text-white hover:border-brand-1000 active:ring active:ring-2;
     }
 </style>

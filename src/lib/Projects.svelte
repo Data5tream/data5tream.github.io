@@ -1,5 +1,6 @@
 <script lang="ts">
     import Project from '$lib/Project.svelte';
+    import SectionHeader from "$lib/components/SectionHeader.svelte";
 
     interface CodeProject {
       title: string,
@@ -24,8 +25,11 @@
     ]
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 sm:mx-0">
-    {#each projects as project}
-        <Project {...project} />
-    {/each}
+<div class="container mx-auto">
+    <SectionHeader title="Open Source projects"/>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 sm:mx-0">
+        {#each projects as project}
+            <Project {...project} />
+        {/each}
+    </div>
 </div>
