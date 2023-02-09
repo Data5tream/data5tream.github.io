@@ -1,13 +1,15 @@
 <script lang="ts">
-  import Projects from '$lib/Projects.svelte';
+    import Projects from '$lib/Projects.svelte';
+    import Languages from "$lib/Languages.svelte";
+    import OtherLinks from "$lib/OtherLinks.svelte";
 
-  const scrollToContent = () => {
-    window.scroll({
-      left: 0,
-      top: window.innerHeight,
-      behavior: 'smooth'
-    })
-  };
+    const scrollToContent = () => {
+        window.scroll({
+            left: 0,
+            top: window.innerHeight,
+            behavior: 'smooth'
+        })
+    };
 </script>
 
 <div class="landing-container">
@@ -19,19 +21,22 @@
     </button>
 </div>
 
-<div class="container h-full py-8 mx-auto flex justify-center items-between min-h-[500px]">
-    <div class="space-y-10 text-center w-full">
-        <h2 class="font-bold text-4xl">Open Source projects</h2>
-        <Projects />
-    </div>
+<div class="bg-brand-1000 text-white pb-8">
+    <Languages/>
+</div>
+<div class="bg-brand-50 pb-8">
+    <Projects/>
+</div>
+<div class="bg-brand-1000 text-white pb-8">
+    <OtherLinks/>
 </div>
 
 <style lang="postcss">
     .landing-container {
-        @apply relative flex justify-center items-center min-h-screen bg-gray-200;
+        @apply relative flex justify-center items-center min-h-screen bg-brand-50;
     }
 
     .pointer {
-        @apply absolute animate-pulse bottom-2 p-4 text-3xl;
+        @apply absolute animate-bounce bottom-2 p-4 text-3xl text-brand-1000;
     }
 </style>
