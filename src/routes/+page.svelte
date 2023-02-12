@@ -3,6 +3,8 @@
     import Languages from "$lib/Languages.svelte";
     import OtherLinks from "$lib/OtherLinks.svelte";
 
+    let y;
+
     const scrollToContent = () => {
         window.scroll({
             left: 0,
@@ -12,11 +14,13 @@
     };
 </script>
 
+<svelte:window bind:scrollY={y}/>
+
 <div class="landing-container">
     <div>
         <img alt="BlueIgnis logo" class="w-64" src="/blueignis_logo.svg">
     </div>
-    <button class="pointer" on:click={scrollToContent}>
+    <button class='pointer' class:animate-bounce={y < 128} on:click={scrollToContent}>
         &downarrow;
     </button>
 </div>
@@ -37,6 +41,6 @@
     }
 
     .pointer {
-        @apply absolute animate-bounce bottom-2 p-4 text-3xl text-brand-1000;
+        @apply absolute bottom-2 p-4 text-3xl text-brand-1000;
     }
 </style>
