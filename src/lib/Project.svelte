@@ -3,7 +3,7 @@
     export let desc;
     export let link;
     export let source;
-
+    export let tags;
 </script>
 <div class="border border-brand-200 rounded text-left flex flex-col">
     <header>
@@ -13,12 +13,21 @@
         <p>{ desc }</p>
     </article>
     <footer>
-        {#if source}
-            <a class="btn" href={source}>Source</a>
-        {/if}
-        {#if link}
-            <a class="btn" href={link}>More info</a>
-        {/if}
+        <div class="flex gap-1 items-end">
+            {#each tags as tag}
+                <span class={'rounded-full border px-1.5 text-xs ' + tag.classes}>
+                    {tag.name}
+                </span>
+            {/each}
+        </div>
+        <div class="flex gap-2">
+            {#if source}
+                <a class="btn" href={source}>Source</a>
+            {/if}
+            {#if link}
+                <a class="btn" href={link}>More info</a>
+            {/if}
+        </div>
     </footer>
 </div>
 
@@ -32,7 +41,7 @@
     }
 
     footer {
-        @apply px-4 py-2 flex justify-between;
+        @apply px-4 py-2 flex justify-between flex-wrap gap-2;
     }
 
     a {
