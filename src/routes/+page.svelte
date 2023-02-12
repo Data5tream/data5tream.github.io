@@ -21,13 +21,13 @@
     </button>
 </div>
 
+<Projects/>
+
 <div class="bg-brand-1000 text-white pb-8">
     <Languages/>
 </div>
+
 <div class="bg-brand-50 pb-8">
-    <Projects/>
-</div>
-<div class="bg-brand-1000 text-white pb-8">
     <OtherLinks/>
 </div>
 

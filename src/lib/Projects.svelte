@@ -25,11 +25,18 @@
     ]
 </script>
 
-<div class="container mx-auto">
-    <SectionHeader title="Open Source projects"/>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 sm:mx-0">
-        {#each projects as project}
-            <Project {...project} />
-        {/each}
+<div class="bg-brand-1000 text-white">
+    <div class="container mx-auto">
+        <SectionHeader title="Open Source projects"/>
+    </div>
+</div>
+
+<div class="bg-brand-50">
+    <div class="container mx-auto py-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 sm:mx-0">
+            {#each projects as project}
+                <Project {...project} />
+            {/each}
+        </div>
     </div>
 </div>
