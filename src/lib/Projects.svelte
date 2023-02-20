@@ -17,18 +17,6 @@
 
     const projects: Array<CodeProject> = [
       {
-        title: 'HQ Invoice',
-        desc: 'Generate an itemized list from HelloHQ reporting CSV',
-        link: 'https://data5tream.github.io/hq-invoice/',
-        source: 'https://github.com/Data5tream/hq-invoice',
-        tags: [
-          {
-            name: 'Vue',
-            classes: 'border-transparent bg-green-400',
-          },
-        ],
-      },
-      {
         title: 'Monolog web viewer',
         desc: 'View monolog log files in the browser',
         link: 'https://data5tream.github.io/monolog-web-viewer/',
@@ -43,7 +31,19 @@
             classes: 'border-amber-500 text-amber-500',
           }
         ],
-      }
+      },
+      {
+        title: 'HQ Invoice',
+        desc: 'Generate an itemized list from HelloHQ reporting CSV',
+        link: 'https://data5tream.github.io/hq-invoice/',
+        source: 'https://github.com/Data5tream/hq-invoice',
+        tags: [
+          {
+            name: 'Vue',
+            classes: 'border-transparent bg-green-400',
+          },
+        ],
+      },
     ]
 </script>
 
