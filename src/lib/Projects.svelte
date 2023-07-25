@@ -16,6 +16,26 @@
     }
 
     const projects: Array<CodeProject> = [
+        {
+            title: 'Simple Status Page',
+            desc: 'Simple status page written in Rust and Svelte',
+            link: '',
+            source: 'https://github.com/Data5tream/simple-status-page',
+            tags: [
+                {
+                    name: 'Rust',
+                    classes: 'border-transparent bg-orange-300',
+                },
+                {
+                    name: 'Svelte',
+                    classes: 'border-transparent bg-orange-500 text-white',
+                },
+                {
+                    name: 'WIP',
+                    classes: 'border-amber-500 text-amber-500',
+                }
+            ],
+        },
       {
         title: 'Monolog web viewer',
         desc: 'View monolog log files in the browser',
