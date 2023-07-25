@@ -49,7 +49,7 @@
 
 <div class="container mx-auto">
     <SectionHeader title="Languages"/>
-    <div class="flex justify-center gap-2">
+    <div class="flex justify-center flex-wrap gap-2">
         {#each langs as lang}
             <img src={baseUrl + lang.url} title={lang.title} alt={lang.title} width="42" height="42"/>
         {/each}

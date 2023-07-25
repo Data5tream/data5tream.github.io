@@ -1,6 +1,6 @@
 <header>
-    <div class="container mx-auto text-white">
-        <span>Simon Barth</span>
+    <div class="container mx-2 sm:mx-auto text-white">
+        <span>Simon Barth | Micro-Portfolio</span>
     </div>
 </header>
 
