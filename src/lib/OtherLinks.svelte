@@ -2,9 +2,15 @@
     import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<div class="container mx-auto">
+<div class="container mx-2 sm:mx-auto">
     <SectionHeader title="Links"/>
     <div class="flex justify-center gap-2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci aliquid assumenda consectetur deleniti dicta, dolorum eius explicabo impedit libero modi nisi perferendis quaerat ratione reiciendis similique sunt veniam voluptatibus.
+        <a href="https://mastodon.online/@data5tream">
+            <img src="https://img.shields.io/badge/Mastodon-6364FF?style=for-the-badge&logo=mastodon&logoColor=white" alt="Mastodon badge"/></a>
+        <a href="https://matrix.to/#/@data5tream:chat.blueignis.es">
+            <img src="https://img.shields.io/badge/Matrix-black?style=for-the-badge&logo=matrix&logoColor=white" alt="Matrix badge"/></a>
+        <a href="https://linkedin.com/in/simonstbarth">
+            <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn badge"/>
+        </a>
     </div>
 </div>
