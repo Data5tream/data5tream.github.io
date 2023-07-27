@@ -3,7 +3,7 @@
     import Languages from "$lib/Languages.svelte";
     import OtherLinks from "$lib/OtherLinks.svelte";
 
-    let y;
+    let y: number;
 
     const scrollToContent = () => {
         window.scroll({

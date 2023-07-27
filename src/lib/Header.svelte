@@ -1,5 +1,5 @@
 <header>
-    <div class="container mx-2 sm:mx-auto text-white">
+    <div class="container mx-2 sm:mx-auto text-white text-center sm:text-left">
         <span>Simon Barth | Micro-Portfolio</span>
     </div>
 </header>

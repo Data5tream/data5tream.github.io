@@ -2,7 +2,7 @@
     import SectionHeader from '$lib/components/SectionHeader.svelte';
 </script>
 
-<div class="container mx-2 sm:mx-auto">
+<div class="container sm:mx-auto">
     <SectionHeader title="Links"/>
     <div class="flex justify-center gap-2">
         <a href="https://mastodon.online/@data5tream">
