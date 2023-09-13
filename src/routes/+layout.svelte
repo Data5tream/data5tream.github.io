@@ -5,6 +5,10 @@
   import Footer from '$lib/Footer.svelte';
 </script>
 
+<svelte:head>
+    <title>Simon Barth | Micro-Portfolio</title>
+</svelte:head>
+
 <Header />
 <main>
     <slot />
