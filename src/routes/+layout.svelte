@@ -10,3 +10,9 @@
     <slot />
 </main>
 <Footer />
+
+<style>
+    main {
+        margin-top: 48px;
+    }
+</style>
