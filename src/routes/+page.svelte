@@ -37,7 +37,8 @@
 
 <style lang="postcss">
     .landing-container {
-        @apply relative flex justify-center items-center min-h-screen bg-brand-50;
+        height: calc(100dvh - 48px);
+        @apply relative flex justify-center items-center bg-brand-50;
     }
 
     .pointer {
