@@ -13,6 +13,7 @@
 
 <style>
     main {
+        flex: 1;
         margin-top: 48px;
     }
 </style>
