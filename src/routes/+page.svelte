@@ -2,6 +2,7 @@
     import Projects from '$lib/Projects.svelte';
     import Languages from "$lib/Languages.svelte";
     import OtherLinks from "$lib/OtherLinks.svelte";
+    import BlogList from "$lib/BlogList.svelte";
 
     let y: number;
 
@@ -26,6 +27,8 @@
 </div>
 
 <Projects/>
+
+<BlogList />
 
 <div class="bg-brand-1000 text-white pb-8">
     <Languages/>
