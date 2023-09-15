@@ -46,6 +46,6 @@
 
     a {
         @apply border rounded py-1 px-4 bg-brand-100 uppercase text-sm transition ring-brand-800 ring-offset-2
-        hover:bg-brand-1000 hover:text-white hover:border-brand-1000 active:ring active:ring-2;
+        hover:bg-brand-1000 hover:text-white hover:border-brand-1000 active:ring-2;
     }
 </style>
