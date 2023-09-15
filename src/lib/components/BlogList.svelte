@@ -1,6 +1,4 @@
 <script lang="ts">
-  import SectionHeader from "$lib/components/SectionHeader.svelte";
-
   const posts = [
     {
       title: 'Test post',
@@ -10,24 +8,15 @@
   ] as Array<{title: string; extract: string; link: string}>;
 </script>
 
-<div class="bg-brand-1000 text-white">
-    <div class="container mx-auto pb-3">
-        <SectionHeader title="Blog" />
-        <p class="text-center">A collection of posts and annotations</p>
-    </div>
-</div>
-
-<div class="container mx-auto my-2">
-    {#each posts as post}
-        <div class="post">
-            <h2>{post.title}</h2>
-            <p>{post.extract}</p>
-            <div>
-                <a href={post.link}>Show post</a>
-            </div>
+{#each posts as post}
+    <div class="post">
+        <h2>{post.title}</h2>
+        <p>{post.extract}</p>
+        <div>
+            <a href={post.link}>Show post</a>
         </div>
-    {/each}
-</div>
+    </div>
+{/each}
 
 <style lang="postcss">
     .post {
