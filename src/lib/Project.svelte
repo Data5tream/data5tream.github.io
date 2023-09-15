@@ -1,9 +1,9 @@
 <script lang="ts">
-    export let title;
-    export let desc;
-    export let link;
-    export let source;
-    export let tags;
+    export let title: string;
+    export let desc: string;
+    export let link: string;
+    export let source: string;
+    export let tags: Array<{ classes: string; name: string}>;
 </script>
 <div class="border border-brand-200 rounded text-left flex flex-col">
     <header>
