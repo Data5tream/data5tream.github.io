@@ -49,6 +49,9 @@
 
 <div class="container mx-auto">
     <SectionHeader title="Languages"/>
+    <p class="text-center mb-3">
+        (Some of the) languages I've worked with. In alphabetical order<br><small>(maybe I should sort them by preference or experience?)</small>
+    </p>
     <div class="flex justify-center flex-wrap gap-2">
         {#each langs as lang}
             <img src={baseUrl + lang.url} title={lang.title} alt={lang.title} width="42" height="42"/>
