@@ -68,8 +68,9 @@
 </script>
 
 <div class="bg-brand-1000 text-white">
-    <div class="container mx-auto">
+    <div class="container mx-auto pb-3">
         <SectionHeader title="Open Source projects"/>
+        <p class="text-center">Small open-source projects that I've build in my free time</p>
     </div>
 </div>
 
