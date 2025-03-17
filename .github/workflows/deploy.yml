@@ -4,66 +4,30 @@ on:
   push:
     branches:
       - 'master'
-    paths:
-      - 'src/**/*'
-      - 'static/**/*'
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build_site:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: pnpm
-
-
-      - name: Install dependencies
-        run: pnpm install
-
-
-      - name: build
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: build_and_deploy
+        uses: shalzz/zola-deploy-action@master
         env:
-          BASE_PATH: '/'
-        run: |
-          pnpm run build
-          touch build/.nojekyll
-
-
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v1
+          PAGES_BRANCH: gh-pages
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BUILD_ONLY: true
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          # this should match the `pages` option in your adapter-static options
-          path: 'build/'
-
-
-  deploy:
-    needs: build_site
-    runs-on: ubuntu-latest
-
-
-    permissions:
-      pages: write
-      id-token: write
-
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy
+          path: 'public'
+      - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
