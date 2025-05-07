@@ -1,0 +1,23 @@
+language: 'javascript'
+
+fileGroups:
+  sources:
+    - 'src/**/*'
+  outputs:
+    - 'dist/**/*'
+
+tasks:
+  build:
+    command: 'sass src/:dist/'
+    inputs:
+      - '@group(sources)'
+    outputs:
+      - '@group(outputs)'
+  watch:
+    extends: 'build'
+    args: '--watch'
+    preset: 'watcher'
+    inputs:
+      - '@group(sources)'
+    outputs:
+      - '@group(outputs)'

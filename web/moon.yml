@@ -1,0 +1,28 @@
+language: 'javascript'
+
+fileGroups:
+  sources:
+    - 'src/**/*'
+    - 'assets/**/*'
+    - 'eleventy.config.js'
+  outputs:
+    - 'dist/**/*'
+
+tasks:
+  build:
+    command: 'pnpm dlx @11ty/eleventy'
+    deps:
+      - 'styles:build'
+    inputs:
+      - '@group(sources)'
+    outputs:
+      - '@group(outputs)'
+  watch:
+    command: 'pnpm dlx @11ty/eleventy --serve'
+    deps:
+      - 'styles:watch'
+    preset: 'watcher'
+    inputs:
+      - '@group(sources)'
+    outputs:
+      - '@group(outputs)'
