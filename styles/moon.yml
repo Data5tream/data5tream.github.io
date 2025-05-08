@@ -24,7 +24,9 @@ tasks:
       - 'stylelint.config.js'
   watch:
     extends: 'build'
-    args: '--watch'
+    args:
+      - '--watch'
+      - '--poll'
     preset: 'watcher'
     inputs:
       - '@group(sources)'

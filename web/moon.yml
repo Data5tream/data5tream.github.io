@@ -1,4 +1,8 @@
 language: 'javascript'
+stack: 'frontend'
+type: 'application'
+toolchain:
+  default: 'node'
 
 fileGroups:
   sources:
