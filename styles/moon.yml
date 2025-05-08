@@ -1,4 +1,8 @@
-language: 'javascript'
+language: 'scss'
+stack: 'frontend'
+type: 'library'
+toolchain:
+  default: 'node'
 
 fileGroups:
   sources:
@@ -13,6 +17,11 @@ tasks:
       - '@group(sources)'
     outputs:
       - '@group(outputs)'
+  lint:
+    command: 'stylelint src/**/*.scss --config stylelint.config.js'
+    inputs:
+      - '@group(sources)'
+      - 'stylelint.config.js'
   watch:
     extends: 'build'
     args: '--watch'
