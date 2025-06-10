@@ -1,6 +1,9 @@
 @use "variables";
 @use "fonts";
 
+// Components
+@use "project_grid";
+
 body {
   background: #222;
   color: #ddd;
@@ -13,10 +16,21 @@ p {
   font-size: 18px;
 }
 
+a {
+  &, &:visited {
+    color: #ddd;
+    text-decoration: underline;
+  }
+
+  &:hover, &:active {
+    color: #fefefe;
+  }
+}
+
 .home-container {
   scroll-snap-type: y mandatory;
   height: 100dvh;
-  overflow: scroll;
+  overflow: hidden scroll;
 
   & > section {
     background: #222;
@@ -65,16 +79,35 @@ p {
     }
   }
 
+  #projects {
+    display: flex;
+    flex-direction: column;
+  }
+
   main {
+    flex: 1;
     margin: 2rem auto;
     max-width: 1400px;
-    padding: 4rem 2rem;
+    padding: 0 2rem;
 
     @media (width >= 500px) {
       padding: 4rem;
     }
   }
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #333;
+  padding: 1rem 4rem;
+
+  .links {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
 
 @keyframes slow-bounce {
   from {

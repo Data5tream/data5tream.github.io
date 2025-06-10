@@ -1,0 +1,22 @@
+<h2>Projects</h2>
+<div class="project-grid">
+{%- for project in collections.project -%}
+  <div>
+    <div class="chips">
+      {%- for chip in project.data.chips -%}
+        <span>{{ chip }}</span>
+      {%- endfor -%}
+    </div>
+    <h4>{{ project.data.title }}</h4>
+    {%- if project.data.description -%}
+      <p>{{ project.data.description }}</p>
+    {%- endif -%}
+    <div class="links">
+      <a href="{{ project.url }}">More info</a>
+      {%- if project.data.github -%}
+        <a href="{{ project.data.github }}" target="_blank">GitHub</a>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endfor -%}
+</div>

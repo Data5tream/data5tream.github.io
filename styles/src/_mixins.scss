@@ -1,0 +1,7 @@
+@use "variables";
+
+@mixin desktop {
+  @media (min-width: #{variables.$laptop-width}) {
+    @content;
+  }
+}
