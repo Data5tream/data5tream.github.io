@@ -1,22 +1,20 @@
 ---
 layout: "layouts/base.njk"
 title: Home
-eleventyImport:
-  collections: ["project"]
 ---
 
 <div class="home-container">
-  <section id="top" class="hero">
-    <div>
-      <h1>Simon<br>Barth</h1>
-      <span>Software Developer &amp; Dev-Ops enthusiast</span>
-    </div>
-    <span>↓</span>
-  </section>
-  <section id="projects">
-    <main>
-      {% include 'projects.njk' %}
-    </main>
-    {% include 'footer.njk' %}
-  </section>
+    <section id="top" class="hero">
+        <div>
+            <h1>Simon<br>Barth</h1>
+            <span>Software Developer &amp; Dev-Ops enthusiast</span>
+        </div>
+        <span>↓</span>
+    </section>
+    <section id="projects" class="content">
+        <main>
+            {% include 'projects.njk' %}
+        </main>
+        {% include 'footer.njk' %}
+    </section>
 </div>

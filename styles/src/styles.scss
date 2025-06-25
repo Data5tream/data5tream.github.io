@@ -17,60 +17,68 @@ p {
 }
 
 a {
-  &, &:visited {
+
+  &,
+  &:visited {
     color: #ddd;
     text-decoration: underline;
   }
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: #fefefe;
   }
 }
 
 .home-container {
-  scroll-snap-type: y mandatory;
   height: 100dvh;
   overflow: hidden scroll;
 
-  & > section {
-    background: #222;
-    height: 100dvh;
-    scroll-snap-align: center;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+
+  &>section {
+    scroll-snap-align: start;
   }
 
   .hero {
     background: #333;
+    height: 100dvh;
     position: relative;
 
-    & > div {
+    &>div {
       padding: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      @media (width >= 500px) {
+      @media (width >=500px) {
         padding: 4rem 2rem;
       }
 
-      & > h1 {
+      &>h1 {
         font-size: 10rem;
         font-weight: 100;
         letter-spacing: -0.6rem;
         line-height: 9rem;
-        margin: 0 0 2rem;
+        margin: 4rem 0 2rem;
 
         // Rotate on mobile
         @media (width < 500px) {
           writing-mode: vertical-rl;
         }
+
+        @media (width >=500px) {
+          margin: 0 0 2rem;
+        }
       }
 
-      & > span {
+      &>span {
         margin-left: 1rem;
       }
     }
 
-    & > span:last-child {
+    &>span:last-child {
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -90,7 +98,7 @@ a {
     max-width: 1400px;
     padding: 0 2rem;
 
-    @media (width >= 500px) {
+    @media (width >=500px) {
       padding: 4rem;
     }
   }
@@ -98,9 +106,16 @@ a {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   background: #333;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
+  gap: 0.5rem;
+
+  @media (width >=500px) {
+    padding: 1rem 4rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .links {
     display: flex;
@@ -118,4 +133,3 @@ footer {
     bottom: 0.5rem;
   }
 }
-
